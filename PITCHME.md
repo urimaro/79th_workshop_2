@@ -5,7 +5,19 @@ Matz
 
 ---
 
-### RubyKaigiは…
+#### 概要
+
+---
+
+moduleについて
+
+---
+
+以上。
+
+---
+
+#### RubyKaigiは…
 
 ---
 
@@ -22,8 +34,8 @@ RubyConfより大きい<br />
 
 ---
 
-天才ではない
-実績のある言語デザイナー
+天才ではない<br />
+実績のある言語デザイナー<br />
 言語好き
 
 ---
@@ -34,14 +46,34 @@ Matzにとってのプログラミング言語は<br />
 ---
 
 客観的に良し悪しを語っているのに<br />
-<br />
-「Ruby↑多言語↓」と理解されてしまう
 
 ---
 
-Lisp(Flavors): 多重継承<br />
+「Ruby is :+1:」<br />
+「Others are :-1:」<br />
+と理解されてしまう
+
+---
+
+#### moduleが生まれるまで
+
+---
+
+Rubyは単一継承を採用した言語
+
+---
+
+でも、色々な機能を再利用したい
+
+---
+
+Rubyが多大な影響を受けているLispはどうしているか…
+
+---
+
+多重継承<br />
 左から右、下から上に並べて優先順位を決めた<br />
-C3アルゴリズム
+(C3アルゴリズム)
 
 ---
 
@@ -53,10 +85,14 @@ Mixin(Flavors)を開発
 
 ---
 
-アイスクリームが発想の元
+**アイスクリームが発想の元**
 
 - バニラ: root class
 - チョコチップ(Flavor)だけをインスタンス化することはできない
+
+---
+
+Rubyはmoduleとして実現
 
 ---
 
@@ -68,16 +104,12 @@ Mixin(Flavors)を開発
 
 ---
 
-Rubyのmodule = Flavor
+**moduleは**
 
----
-
-moduleはclassクラスの親クラス
-
----
-
-インスタンスを作れない
-classから継承できない
+- Flavor
+- moduleはclassクラスの親クラス
+- インスタンスを作れない
+- classから継承できない
 
 ---
 
@@ -92,32 +124,34 @@ moduleはincludeで受け継がせることができる
 
 #### 2. name space
 
-入れ物として使う<br />
-関連するclass、moduleを詰め込む<br />
-ex. Net:HTTP
+- 入れ物として使う
+- 関連するclass、moduleを詰め込む
+- ex. Net:HTTP
 
 ---
 
 #### 3. singleton
 
-singleton(唯一のオブジェクト)を実現するために使う<br />
-ex. module FileUtils
+- singleton(唯一のオブジェクト)を<br />
+実現するために使う
+- ex. module FileUtils
 
 ---
 
 #### 4. メソッドの集まり
 
-メソッドの集合<br />
-ex. module Math 
+- メソッドの集合
+- ex. module Math 
 
 ---
 
-module_function
+**module_function**
+
 includeするとクラスメソッドのように使える
 
 ---
 
-#### 5. メソッド結合
+#### 5. メソッドの結合
 
 ---
 
@@ -133,11 +167,12 @@ alias method chain
 
 ---
 
-2度呼ぶと壊れる
+2度呼び出すと壊れる
 
 ---
 
-Module#prependの登場<br />
+**Module#prependの登場**
+
 安全に置き換えられるようになった
 
 ---
@@ -146,17 +181,20 @@ Module#prependの登場<br />
 
 ---
 
-1度prependしたら外せない<br />
-クラス構成はプログラムの中で<br />
-簡単に変わってしまうべきではない<br />
+**1度prependしたら外せない**
+
+「クラス構成はプログラムの中で<br />
+簡単に変わってしまうべきではない」<br />
 という考え方にもとづいている
 
 ---
 
 CLOSのmethod combinationが実現できる<br />
-before/after hookを実現する機能<br />
 <br />
-- CLOS: common lisp object system
+- CLOS  
+    common lisp object system
+- method combination  
+    before/after hookを実現する機能
 
 ---
 
@@ -169,7 +207,8 @@ module prependで実現できる
 
 ---
 
-Rubyはopen class<br />
+**Rubyはopen class**
+
 既存機能を書き換えることができる<br />
 = monkey patch
 
