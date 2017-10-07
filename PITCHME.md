@@ -49,8 +49,8 @@ Matzにとってのプログラミング言語は<br />
 
 ---
 
-「Ruby is :+1:」<br />
-「Others are :-1:」<br />
+「Ruby is AWESOME」<br />
+「Others are DAMNED」<br />
 と理解されてしまう
 
 ---
@@ -67,11 +67,12 @@ Rubyは単一継承を採用した言語
 
 ---
 
-Rubyが多大な影響を受けているLispはどうしているか…
+Rubyが多大な影響を受けている<br />
+Lispはどうしているか…
 
 ---
 
-多重継承<br />
+**多重継承**<br />
 左から右、下から上に並べて優先順位を決めた<br />
 (C3アルゴリズム)
 
@@ -106,7 +107,7 @@ Rubyはmoduleとして実現
 
 **moduleは**
 
-- Flavor
+- = ListのFlavor
 - moduleはclassクラスの親クラス
 - インスタンスを作れない
 - classから継承できない
@@ -118,7 +119,8 @@ moduleはincludeで受け継がせることができる
 ---
 
 他の使い方をするようになった<br />
-＜Matzのせい
+<br />
+Matzのせい
 
 ---
 
@@ -133,7 +135,7 @@ moduleはincludeで受け継がせることができる
 #### 3. singleton
 
 - singleton(唯一のオブジェクト)を<br />
-実現するために使う
+  実現するために使う
 - ex. module FileUtils
 
 ---
@@ -264,7 +266,7 @@ module Str
   def to_s; end
   def to_str; end
 end
-obj.conform(Str)
+obj.confirm(Str)
 # to_s, to_strが定義されていないと例外発生
 ```
 
@@ -287,10 +289,25 @@ obj.respond_to?(:method_name)
 
 ---
 
+実装することは少なくなったが、<br />
+Rubyのデザイナーであることはかわらない
+
+---
+
+Rubyは私の言語から我々の言語となった
+
+---
+
+
 コミュニティがRubyを進めている
 
 ---
 
-Rubyは私の言語から我々の言語となった<br />
-実装することは少なくなったが、<br />
-Rubyのデザイナーであることはかわらない
+Rubyを良くしましょう
+
+---
+
+世界を良くしましょう
+
+---
+
